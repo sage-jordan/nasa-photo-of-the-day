@@ -1,7 +1,7 @@
 import  React, { useState, useEffect } from 'react';
 import axios from "axios";
 import "./App.css";
-import Card from "./components/Card";
+import PhotoOfTheDay from "./components/Card";
 
 
 export default function App () {
@@ -19,13 +19,7 @@ export default function App () {
 
     return (
         <div className="App">
-            <Card 
-                copyright={data.copyright}
-                title={data.title}
-                date={data.title}
-                img={data.url}
-                explanation={data.explanation} 
-                />
+            <PhotoOfTheDay props={data}/>
         </div>
     );
 };
