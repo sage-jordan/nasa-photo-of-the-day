@@ -5,6 +5,7 @@ function PhotoOfTheDay(props){
     console.log(props);
     return (
         <div class="Card">
+            <h1>Photo Of The Day</h1>
             <Card 
             image={props.props.hdurl}
             header={props.props.title}

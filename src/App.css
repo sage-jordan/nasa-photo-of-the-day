@@ -1,7 +1,15 @@
 .App {
   margin: 20% auto;
 }
+.Card {
+  width: 90%;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
 div.ui.card {
   margin: 0 auto;
+  width: 90%;
 }
 
