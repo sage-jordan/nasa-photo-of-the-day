@@ -11,7 +11,7 @@ function PhotoOfTheDay(props){
             header={props.props.title}
             meta={props.props.date}
             description={props.props.explanation}
-            extra={props.props.copyright}
+            extra={`Copyright: ${props.props.copyright}`}
             />
         </div>
     )
