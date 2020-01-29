@@ -15,7 +15,7 @@ export default function App() {
         console.log(res);
         setData(res.data);
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log(`In Axios: ${err.message}`));
   }, []);
 
   return (
