@@ -4,7 +4,7 @@ import { Card } from "semantic-ui-react";
 function PhotoOfTheDay(props) {
   console.log(props);
 
-  if (!props.props) return <h3>Loading...</h3>;
+  if (!props.props.title) return <h1>Loading...</h1>;
 
   return (
     <div className="Card">
