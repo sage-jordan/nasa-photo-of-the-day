@@ -4,16 +4,22 @@
   height: 150%;
   padding: 10% 0;
 }
+
 .Card {
   width: 90%;
   margin: auto;
 }
+
 h1 {
   text-align: center;
   color: white;
 }
+
 div.ui.card {
   margin: 0 auto;
   width: 90%;
 }
 
+.react-date-picker {
+  background-color: white;
+}

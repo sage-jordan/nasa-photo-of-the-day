@@ -2,13 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 import PhotoOfTheDay from "./components/Card";
-import DatePicker from "react-date-picker";
 
 export default function App() {
   const [data, setData] = useState({});
-  const [date, setDate] = useState(new Date());
-
-  const onChange = date => setDate({ date });
 
   useEffect(() => {
     axios
@@ -24,7 +20,6 @@ export default function App() {
 
   return (
     <div className="App">
-      <DatePicker onChange={onChange} value={date} />
       <PhotoOfTheDay props={data} />
     </div>
   );
