@@ -5,6 +5,13 @@
   padding: 10% 0;
 }
 
+.nav {
+  display: flex;
+  width: 90%;
+  justify-content: flex-end;
+  margin: auto;
+}
+
 .Card {
   width: 90%;
   margin: auto;

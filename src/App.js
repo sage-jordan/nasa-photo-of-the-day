@@ -1,26 +1,16 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import "./App.css";
-import PhotoOfTheDay from "./components/Card";
+import { Route } from "react-router-dom";
+import PhotoOfTheDay from "./components/PhotoOfTheDay";
+import DatePhoto from "./components/DatePhoto";
+import Navigation from "./components/Navigation";
 
 export default function App() {
-  const [data, setData] = useState({});
-
-  useEffect(() => {
-    axios
-      .get(
-        "https://api.nasa.gov/planetary/apod?api_key=wsIfZQBWeTafkOWECuHwkAJ60NVRXblh3bZMvibg"
-      )
-      .then(res => {
-        console.log(res);
-        setData(res.data);
-      })
-      .catch(err => console.log(`In Axios: ${err.message}`));
-  }, []);
-
   return (
     <div className="App">
-      <PhotoOfTheDay props={data} />
+      <Navigation />
+      <Route exact path="/" component={PhotoOfTheDay} />
+      <Route path="/date" component={DatePhoto} />
     </div>
   );
 }

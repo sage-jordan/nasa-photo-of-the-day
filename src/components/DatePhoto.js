@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DatePicker from "react-date-picker";
 import Card from "./Card";
+import axios from "axios";
 
 export default function DatePhoto() {
   const [data, setData] = useState({});
@@ -9,6 +10,7 @@ export default function DatePhoto() {
   const onChange = date => setDate({ date });
 
   useEffect(() => {
+    console.log(date);
     axios
       .get(
         `https://api.nasa.gov/planetary/apod?api_key=wsIfZQBWeTafkOWECuHwkAJ60NVRXblh3bZMvibg&date=${date}`
