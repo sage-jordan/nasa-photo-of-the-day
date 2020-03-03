@@ -17,5 +17,5 @@ export default function PhotoOfTheDay() {
       .catch(err => console.log(`In Axios: ${err.message}`));
   }, []);
 
-  return <Card props={data} />;
+  return <Card data={data} />;
 }
